@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Children's Poker</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>♠</text></svg>">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="vignette"></div>
+
+  <div class="game-container">
+    <div class="header">
+      <div class="header-line"></div>
+      <h1><span>CHILDREN'S</span> POKER</h1>
+      <div class="subtitle">Heads-Up No Limit</div>
+      <div class="header-line"></div>
+    </div>
+
+    <div class="table">
+      <div class="ai-section">
+        <div class="ai-label">The Shadow</div>
+        <div class="ai-cards" id="ai-cards">
+          <div class="card empty"></div>
+          <div class="card empty"></div>
+        </div>
+      </div>
+
+      <div class="community-section">
+        <div class="community-cards" id="community-cards">
+          <div class="card empty"></div>
+          <div class="card empty"></div>
+          <div class="card empty"></div>
+          <div class="card empty"></div>
+          <div class="card empty"></div>
+        </div>
+      </div>
+
+      <div class="player-section">
+        <div class="player-label">You</div>
+        <div class="player-cards" id="player-cards">
+          <div class="card empty"></div>
+          <div class="card empty"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="bottom-bar">
+      <div class="status-panel">
+        <div class="game-status" id="game-status">Press "New Hand" to start</div>
+        <div class="hand-name" id="player-hand-name"></div>
+        <div class="action-log" id="player-action"></div>
+        <div class="action-log" id="ai-action"></div>
+        <div class="ai-thinking" id="ai-thinking"></div>
+        <div class="hand-name" id="ai-hand-name"></div>
+      </div>
+      <div class="chips-panel">
+        <div class="chip-display player">
+          <div class="label">Your Stack</div>
+          <div class="value" id="player-stack">1000</div>
+        </div>
+        <div class="chip-display pot">
+          <div class="label">Pot</div>
+          <div class="value" id="pot-value">0</div>
+        </div>
+        <div class="chip-display ai">
+          <div class="label">AI Stack</div>
+          <div class="value" id="ai-stack">1000</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="controls-panel" id="controls">
+      <button class="ctrl-btn" onclick="uiStartHand()">New Hand</button>
+    </div>
+  </div>
+
+  <script src="js/deck.js"></script>
+  <script src="js/evaluator.js"></script>
+  <script src="js/ai.js"></script>
+  <script src="js/game.js"></script>
+  <script src="js/ui.js"></script>
+</body>
+</html>
